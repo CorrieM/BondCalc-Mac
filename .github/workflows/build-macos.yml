@@ -30,8 +30,6 @@ jobs:
 
       - name: Create Release and Upload .dmg
         uses: softprops/action-gh-release@v1
-        with:
-        name: macOS Release v1.0.${{ github.run_number }}
         files: dist/*.dmg
         env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
