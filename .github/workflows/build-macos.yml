@@ -28,8 +28,11 @@ jobs:
           npm run build || echo "Skipping if not defined"
           npx electron-builder --mac
 
-      - name: Upload macOS artifact (.dmg)
-        uses: actions/upload-artifact@ec1684cd88d8b96b8be59a1fa55161c6c2dbe268
-        with:
-            name: IGrowBondsCalculator-macOS
-            path: dist/*.dmg
+        - name: Create Release and Upload .dmg
+          uses: softprops/action-gh-release@v1
+          with:
+          tag_name: v1.0.${{ github.run_number }}
+          name: macOS Release v1.0.${{ github.run_number }}
+          files: dist/*.dmg
+            env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
