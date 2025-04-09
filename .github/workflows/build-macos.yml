@@ -25,7 +25,7 @@ jobs:
 
       - name: Build macOS .dmg
         run: |
-          npm run build || echo "Skipping build step if not defined"
+          npm run build || echo "Skipping if not defined"
           electron-builder --mac
 
       - name: Upload macOS artifact (.dmg)
