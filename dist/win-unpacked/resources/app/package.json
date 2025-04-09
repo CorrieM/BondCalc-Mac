@@ -1,0 +1,15 @@
+{
+  "name": "IGrowBondsCalculator",
+  "version": "1.0.0",
+  "description": "IGrow Bonds Calculator Standalone Application",
+  "author": "Corrie Muller",
+  "main": "main.js",
+  "win": {
+    "requestedExecutionLevel": "requireAdministrator",
+    "target": "portable",
+    "icon": "frontend/logo.ico"
+  },
+  "dependencies": {
+    "tree-kill": "^1.2.2"
+  }
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bond Comparison Calculator</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #ffffff;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    header small {
+      color: #B7364B;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+    header h1 {
+      font-size: 36px;
+      font-weight: bold;
+    }
+    header p {
+      color: #666;
+      margin-top: 10px;
+    }
+    .inputs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      background: #f8f8f8;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+      color: #B7364B;
+    }
+    .input-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 5px 10px;
+      font-weight: normal;
+      font-size: 16px;
+    }
+    .input-wrapper button {
+      background: #eee;
+      border: none;
+      padding: 4px 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .calculate-btn {
+      background-color: #B7364B;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+    .cards {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .card {
+      flex: 1;
+      min-width: 320px;
+      padding: 24px;
+      border-radius: 12px;
+      color: white;
+    }
+    .card h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+    .earnings {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    .igrow {
+      background-color: #B7364B;
+    }
+    .competitor {
+      background-color: #1F7AEC;
+      position: relative;
+    }
+    .switch-btn {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background-color: #5E6CA2;
+      border: none;
+      padding: 6px 12px;
+      color: white;
+      border-radius: 20px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .print-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <small>CALCULATE CLIENT POTENTIAL</small>
+      <h1>Bond Comparison Calculator</h1>
+      <p>See how IGrow compares to competitors and maximise your sales returns.</p>
+    </header>
+
+    <div class="inputs">
+      <div class="input-group">
+        <label>Number of Properties</label>
+        <div class="input-wrapper">
+          <button>-</button>
+          <span>32</span>
+          <button>+</button>
+        </div>
+      </div>
+      <div class="input-group">
+        <label>Average Property Value (R)</label>
+        <div class="input-wrapper">
+          <span>R2,300 000.00</span>
+        </div>
+      </div>
+      <button class="calculate-btn">CALCULATE</button>
+    </div>
+
+    <div class="cards">
+      <div class="card igrow">
+        <h2>IGROW</h2>
+        <div class="row"><span>Rate</span><span>0.5%</span></div>
+        <div class="row"><span>Commission</span><span>R 150,000.00</span></div>
+        <div class="row"><span>Transfer Incentive</span><span>R 0.09</span></div>
+        <div class="row"><span>Total Commission</span><span>R 150,000.09</span></div>
+        <div class="row"><span>Revenue Rate</span><span>0.63%</span></div>
+        <div class="earnings">
+          <div class="row"><span>Per Month</span><span>R 300,000.00</span></div>
+          <div class="row"><span>Per Annum</span><span>R 3,600,000.00</span></div>
+        </div>
+      </div>
+
+      <div class="card competitor">
+        <h2>Competitor 1</h2>
+        <button class="switch-btn">⇄ SWITCH</button>
+        <div class="row"><span>Rate</span><span>0.40%</span></div>
+        <div class="row"><span>Commission</span><span>R 150,000.00</span></div>
+        <div class="row"><span>Transfer Incentive</span><span>R 0.00</span></div>
+        <div class="row"><span>Total Commission</span><span>R 150,000.00</span></div>
+        <div class="row"><span>Revenue Rate</span><span>0.00%</span></div>
+        <div class="earnings">
+          <div class="row"><span>Per Month</span><span>R 150,000.00</span></div>
+          <div class="row"><span>Per Annum</span><span>R 1,800,000.00</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="print-icon">🖨️ PRINT</div>
+</body>
+</html>

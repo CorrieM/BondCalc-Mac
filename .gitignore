@@ -1,0 +1,5 @@
+node_modules/electron/dist/electron.exe
+dist/IGrowBondsCalculator 1.0.0.exe
+dist/IGrowBondsCalculator-win32-x64/IGrowBondsCalculator.exe
+dist/win-unpacked/IGrowBondsCalculator.exe
+node_modules/electron/dist/electron.exe

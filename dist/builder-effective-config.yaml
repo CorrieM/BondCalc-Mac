@@ -1,0 +1,25 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.igrow.bondscalculator
+productName: IGrowBondsCalculator
+asar: false
+files:
+  - filter:
+      - main.js
+      - preload.js
+      - backend/**
+      - frontend/**
+      - package.json
+extraResources:
+  - from: backend/dist/app.exe
+    to: app.exe
+  - from: backend/Bonds Calculator.xlsx
+    to: Bonds Calculator.xlsx
+extraFiles:
+  - from: backend/
+    to: backend/
+    filter:
+      - app.exe
+      - Bonds Calculator.xlsx
+electronVersion: 25.9.8
